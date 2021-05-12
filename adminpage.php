@@ -61,6 +61,7 @@
 
     <!-- Container -->
     <div class="container">
+    <!-- kotak kotak data jurusan -->
     <h4 class="text-center m-4">DATA JURUSAN</h4>
               <div class="row">
                 <div class="card mx-3 mb-3 " style="width: 18rem;">
@@ -112,6 +113,7 @@
                             <p class="card-text"><a href="#">NAMA JURUSAN</a></p>
                         </div>
                 </div>
+                <!-- akhir dari kotak kotak data jurusan -->
     </div>
 
     <!-- Akhir Container -->
