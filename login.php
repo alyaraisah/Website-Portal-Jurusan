@@ -33,11 +33,11 @@
 	
 	<div class="limiter">
 		<!-- Baground warna warni gede -->
-		<div class="container-login100" style="background-color: #A8E3D7;">
+		<div class="container-login100" style="background-color:#172D44;">
 			<!-- Backgound putih login -->
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 				<!-- Formulir untuk login -->
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="" method="POST">
 					<span class="login100-form-title p-b-49">Login</span>
 
 					<div class="tiga-opsi-user">
@@ -72,7 +72,7 @@
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">Login</button>
+							<button class="login100-form-btn" type="submit" name="login">Login</button>
 						</div>
 					</div>
 
@@ -86,11 +86,31 @@
 				
 				<!-- masukin php -->
 				<?php
-					
-				
+					if(isset($_POST['login'])){
+						include"config.php";
+						$username = $_POST['username'];
+						$password = $_POST['pass'];
+
+						$cek_user = mysqli_query($koneksi, "SELECT * FROM akun WHERE username ='$username' ");
+						$row = mysqli_num_rows($cek_user);
+
+						if($row === 1){
+							// jalankan prosedur seleksi password
+							$fetch_pass = mysqli_fetch_assoc($cek_user);
+							$cek_pass = $fetch_pass['password'];
+
+							if($cek_pass <> $password){
+								echo"<script>alert('Password Salah');</script>";
+							} else {
+								echo"<script>alert('Login Berhasil');</script>";
+							}
+						} else {
+							echo"<script>alert('username salah atau belum terdaftar');</script>";
+						}
+					}
 				?>
 			</div>
-		</div>
+		</div> 
 	</div>
 	
 
