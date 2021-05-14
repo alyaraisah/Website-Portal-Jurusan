@@ -46,7 +46,7 @@
           <span class="icon-bar"></span>
         </button>
 
-        <!-- drop down actions -->
+        <!-- drop down actions dan data -->
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item dropdown">
