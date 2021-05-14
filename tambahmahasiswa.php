@@ -56,10 +56,6 @@ if(isset($_POST["submit"])){
             <!-- tulisan -->
             <a class="navbar-brand" href="#">Tambah Data Mahasiswa</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
             </button>
             
         </div>
