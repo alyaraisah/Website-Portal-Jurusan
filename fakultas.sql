@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 12, 2021 at 04:48 PM
+-- Generation Time: May 14, 2021 at 05:00 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -57,14 +57,18 @@ CREATE TABLE `akun` (
 --
 
 INSERT INTO `akun` (`username`, `pw`, `email`) VALUES
+('agusmul', 'agusgus', 'agusmul@gmail.com'),
 ('akunadmin', 'adminmin', 'admin@gmail.com'),
 ('alyaraisa', 'alyaya', 'alya@gmail.com'),
 ('haliputri', 'halili', 'hali@gmail.com'),
 ('Hammami', 'Ilmimi', 'Hammam@gmail.com'),
 ('nabilfikri', 'nabilbil', 'nabil@gmail.com'),
 ('rendyc', 'rendydy', 'rendy@gmail.com'),
-('umican', 'micancan', 'mican@gmail.com'),
-('usernamebaru', 'usus', 'user@gmail.com');
+('Ridwanf', 'ridwanwan', 'ridwan@gmail.com'),
+('rongsok48', 'rongsoksok', 'rongsok48@gmail.com'),
+('srim', 'sriri', 'sri@gmail.com'),
+('sudrajatp', 'sudrajatjat', 'sudrajat@gmail.com'),
+('umican', 'micancan', 'mican@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -85,7 +89,10 @@ CREATE TABLE `dosen` (
 --
 
 INSERT INTO `dosen` (`ID_Dosen`, `NamaDsn`, `Alamat`, `ID_Admin`, `username`) VALUES
-(910, 'Mican', 'Jl.nyasar', 103, 'umican');
+(910, 'Mican', 'Jl.nyasar', 103, 'umican'),
+(911, 'Sri Mutia', 'Jl. Kembang Kol', 103, 'srim'),
+(913, 'Agus Mulyadi', 'jl. kemana weh lah', 103, 'agusmul'),
+(915, 'Sudrajat Priangan I', 'jl. sumpah gapaham', 103, 'sudrajatp');
 
 -- --------------------------------------------------------
 
@@ -107,7 +114,9 @@ CREATE TABLE `kurikulum` (
 --
 
 INSERT INTO `kurikulum` (`ID_Matkul`, `SKS`, `Semester`, `Deskripsi_Materi`, `ID_Dosen`, `ID_Admin`) VALUES
-(123, 3, 4, 'materi mengenai blablabla', 910, 103);
+(123, 3, 4, 'materi mengenai blablabla', 910, 103),
+(124, 2, 5, 'aduh aduh aduh beuh', 913, 103),
+(126, 3, 5, 'beuw bewu', 915, 103);
 
 -- --------------------------------------------------------
 
@@ -149,10 +158,12 @@ CREATE TABLE `mahasiswa` (
 
 INSERT INTO `mahasiswa` (`no_mhs`, `NamaMhs`, `Alamat`, `NPM`, `jurusan`, `ID_Admin`, `username`) VALUES
 (1, 'Hali Putri A', 'Jl.gatau lagi', 140810200006, 'Teknik Informatika', 103, 'haliputri'),
-(2, 'M Nabil Fikri S P', 'Jl.kemana', 140810200046, 'Teknik Informatika', 103, 'nabilfikri'),
-(3, 'Alya Raisa H', 'Jl.gatau lagi', 140810200060, 'Teknik Informatika', 103, 'alyaraisa'),
-(4, 'Rendy Christian', 'Jl. kepada kebaikan', 140810200100, 'Teknik Mesin', 103, 'rendyc'),
-(5, 'Hammam Ilmi L', 'Jl. cintaku padamu', 140810200200, 'Hubungan Internasional', 103, 'Hammami');
+(2, 'M Nabil Fikri S P', 'jl. cicukang', 140810200046, 'Teknik Informatika', 103, 'nabilfikri'),
+(3, 'Alya Raisa H', 'jl. jalan', 140810200060, 'Teknik Informatika', 103, 'alyaraisa'),
+(4, 'Rendy Christian', 'Jl. Kembang Kol', 141810200100, 'Teknik Mesin', 103, 'rendyc'),
+(5, 'Hammam Ilmi L', 'jl.the mansion', 140810200500, 'Hubungan Internasional', 103, 'Hammami'),
+(6, 'Ridwan Faizan M', 'Jl. Kembangkan', 140810200600, 'DKV', 103, 'Ridwanf'),
+(7, 'rongsokanbaru', 'jl.kebenaran', 140810200700, 'Teknik Informatika', 103, 'rongsok48');
 
 --
 -- Indexes for dumped tables
