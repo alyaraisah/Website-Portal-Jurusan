@@ -4,7 +4,7 @@
 
     //tombol cari ditekan
     if(isset($_POST["cari"])){
-        $kurikulum = cari($_POST["keyword"]);
+        $kurikulum = cari_kurikulum($_POST["keyword"]);
     }
 ?>
 

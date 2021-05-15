@@ -156,4 +156,11 @@
 
         return query($query);
     }
+
+    function cari_kurikulum($keyword){
+        global $conn;
+        $query = "SELECT * FROM kurikulum WHERE ID_Dosen LIKE '%$keyword%' OR ID_Matkul LIKE '%$keyword%' OR  SKS LIKE '%$keyword%' OR Semester LIKE '%$keyword%' OR Deskripsi_Materi LIKE '%$keyword%'";
+
+        return query($query);
+    }
 ?>
