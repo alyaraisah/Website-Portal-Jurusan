@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(!isset($_SESSION['login'])){
+  header('location: login.php');
+  exit;
+}
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -50,7 +58,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link btn btn-secondary tombol" href="landingPage.php">Keluar</a>
+              <a class="nav-link btn btn-secondary tombol" href="logout.php" onclick="return confirm('Apakah yakin ingin keluar?')">Keluar</a>
             </li>
           </ul>
         </div>

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -91,18 +92,19 @@
 						$username = $_POST['username'];
 						$password = $_POST['pass'];
 
-						$cek_user = mysqli_query($koneksi, "SELECT * FROM akun WHERE username ='$username' ");
+						$cek_user = mysqli_query($koneksi, "SELECT * FROM akun WHERE username = (SELECT username FROM ADMIN WHERE username = '$username') ");
 						$row = mysqli_num_rows($cek_user);
 
 						if($row === 1){
 							// jalankan prosedur seleksi password
 							$fetch_pass = mysqli_fetch_assoc($cek_user);
-							$cek_pass = $fetch_pass['password'];
+							$cek_pass = $fetch_pass['pw'];
 
 							if($cek_pass <> $password){
 								echo"<script>alert('Password Salah');</script>";
 							} else {
-								echo"<script>alert('Login Berhasil');</script>";
+								$_SESSION['login'] = true;
+								echo"<script>document.location.href='adminpage.php'</script>";
 							}
 						} else {
 							echo"<script>alert('username salah atau belum terdaftar');</script>";

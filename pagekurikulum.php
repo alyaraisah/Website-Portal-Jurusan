@@ -97,7 +97,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link btn btn-secondary tombol" href="landingPage.php">Keluar</a>
+            <a class="nav-link btn btn-secondary tombol" href="logout.php" onclick="return confirm('Apakah yakin ingin keluar?')">Keluar</a>
             </li>
           </ul>
         </div>

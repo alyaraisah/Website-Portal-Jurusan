@@ -1,6 +1,6 @@
 <?php
 
-$koneksi = mysqli_connect("localhost","root","","cobain");      // $koneksi = variable koneksi, itu bisa apa aja namanya
+$koneksi = mysqli_connect("localhost","root","","fakultas");      // $koneksi = variable koneksi, itu bisa apa aja namanya
 /*
 if(!$koneksi){                                                  // kalo $koneksi false
     echo "Gagal melakukan koneksi ke MySQL : ";
