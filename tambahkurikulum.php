@@ -20,48 +20,84 @@ if(isset($_POST["submit"])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        .tab {
-            display: inline-block;
-            margin-left: 40px;
-        }
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    </style>
-    <meta charset="UTF-8">
-    <title>Tambah Data Kurikulum</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <!-- My Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Viga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tittle -->
+    <title>Tambah Data Mata Kuliah</title>
 </head>
 <body>
-    <h1>Tambah data Matkul</h1>
-    <a href="pagekurikulum.php">Kembali</a>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#172D44;">
+        <div class="container">
 
-    <form action="" method="post">
-        <ul>
-            <li>
-                <label for="ID_Matkul">ID_Matkul<span class="tab"></span>:</label>
-                <input type="text" name="ID_Matkul" id="ID_Matkul" required>
-            </li>
-            <li>
-                <label for="SKS">SKS<span class="tab"></span>:</label>
-                <input type="text" name="SKS" id="SKS" required>
-            </li>
-            <li>
-                <label for="Semester">Semester <span class="tab"></span>:</label>
-                <input type="text" name="Semester" id="Semester" required>
-            </li>
+            <!-- kembali -->
+            <div class="collapse navbar-collapse">
+                <a href="pagekurikulum.php" class="btn btn-outline-light">Kembali</a>
+            </div>
+            
+            <!-- tulisan -->
+            <a class="navbar-brand" href="#">Tambah Data Mata Kuliah</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            </button>
+            
+        </div>
+    </nav>
+    <!-- akhir navbar -->
 
-            <li>
-                <label for="Deskripsi_Materi">Deskripsi_Materi<span class="tab"></span>:</label>
-                <input type="text" name="Deskripsi_Materi" id="Deskripsi_Materi" required>
-            </li>
+    <!-- form -->
+    <br><br>
+        <div class="container">
+            <form action="" method="post">
+                <div class="mb-3">
+                    <label for="ID_Matkul" class="form-label">ID Matkul</label>
+                    <input type="text" name="ID_Matkul" class="form-control" id="ID_Matkul" required aria-describedby="Help">
+                    <div id="Help" class="form-text">Input ID Matkul harus nomor baru</div>
+                </div>
 
-            <li>
-                <label for="ID_Dosen">ID_Dosen <span class="tab"></span>:</label>
-                <input type="text" name="ID_Dosen" id="ID_Dosen" required>
-            </li>
+                <div class="mb-3">
+                    <label for="SKS" class="form-label">SKS</label>
+                    <input type="text" name="SKS" class="form-control" id="SKS" required>
+                </div>
 
-            <li>
-                <button type="submit" name="submit">Tambah Data</button>
-            </li>
-        </ul>
+                <div class="mb-3">
+                    <label for="Semester" class="form-label">Semester</label>
+                    <input type="text" name="Semester" class="form-control" id="Semester" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Deskripsi_Materi" class="form-label">Deskripsi_Materi</label>
+                    <input type="text" name="Deskripsi_Materi" class="form-control" id="Deskripsi_Materi" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="ID_Dosen" class="form-label">ID_Dosen</label>
+                    <input type="text" name="ID_Dosen" class="form-control" id="ID_Dosen" required aria-describedby="Help">
+                    <div id="Help" class="form-text">Input ID Dosen yang sudah ada</div>
+                </div>
+
+                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 </body>
 </html> 
