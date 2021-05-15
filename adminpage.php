@@ -67,7 +67,7 @@
                 <div class="card mx-3 mb-3 " style="width: 18rem;">
                     <img src="img/img3.png" class="card-img-top" alt="img/img3.png">
                         <div class="card-body">
-                            <p class="card-text"><a href="pagemahasiswa.php">Teknik Informatika</a></p>
+                            <p class="card-text text-center"><a href="pagemahasiswa.php">Teknik Informatika</a></p>
                         </div>
                 </div>
                   <div class="card mx-3 mb-3" style="width: 18rem;">

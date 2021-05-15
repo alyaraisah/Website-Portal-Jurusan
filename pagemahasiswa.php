@@ -1,6 +1,6 @@
 <?php 
     require 'functions1.php';
-    $mahasiswa = query("SELECT * FROM mahasiswa");
+    $mahasiswa = query("SELECT * FROM mahasiswa WHERE jurusan = 'teknik informatika';");
 
     //tombol cari ditekan
     if(isset($_POST["cari"])){
@@ -38,7 +38,7 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#172D44;">
       <div class="container">
-        <a class="navbar-brand" href="#">Portal Web FMIPA Unpad</a>
+        <a class="navbar-brand" href="adminpage.php">Portal Web FMIPA Unpad</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           <span class="icon-bar"></span>
