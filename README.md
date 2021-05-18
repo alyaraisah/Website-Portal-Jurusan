@@ -1,6 +1,7 @@
 # Projek-Sisdat
 
-# Judul
+# Portal Web Jurusan
+
 # Anggota :
 - Hali Putri Aisyah (140810200006)
 - M. Nabil Fikri S. P (140810200046)
